@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="hu">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="style.css" />
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x"
+            crossorigin="anonymous"
+        />
+        <title>Barátságkupa</title>
+    </head>
+    <body style="background-color: green">
+        <header>
+            <nav class="navbar navbar-expand-lg 12 navbar-light 6 bg-light 6">
+                <div
+                    class="container-fluid"
+                    style="background-color: greenyellow"
+                >
+                    <a class="navbar-brand" href="#"></a>
+                    <button
+                        class="navbar-toggler"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#navbarNav"
+                        aria-controls="navbarNav"
+                        aria-expanded="false"
+                        aria-label="Toggle navigation"
+                    >
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav">
+                            <li class="nav-item">
+                                <a
+                                    class="nav-link active"
+                                    aria-current="page"
+                                    href="index.html"
+                                    >Főoldal</a
+                                >
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="kepek.html">Képek</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="díjak.html">Díjak</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        <main>
+            <div>
+                <h2>Jelentkezés</h2>
+            </div>
+            <form action="nev.php" method="POST">
+                <label for="nev">Név:</label>
+                <input type="text" name="nev" id="nev" />
+                <input type="submit" value="Jelentkezes" />
+            </form>
+            <div>
+                <img src="2021 csoport.jpg" alt="" />
+                <h1>A Verseny története</h1>
+                <p>
+                    2012-ben Kereszturi Sándor az egyesület elnökeként
+                    tevékenykedett egy horgásztavon, ott tartották siketek
+                    évadnyitó versenyüket, azóta több horgásszal tartja a
+                    kapcsolatot közülük. Lós Robival többszöri „beszélgetés”, de
+                    főleg piszkálódás közben jött az ötlet csináljunk
+                    siket-halló horgászversenyt, amit évente lehetne tartani így
+                    is közelebb hozni egymáshoz az embereket. Aztán továbbment a
+                    tervezés, hogy bármilyen fogyatékkal élő ember részt
+                    vehessen ezen a napon. A verseny neve is innen adódik,
+                    sok-sok beszélgetés után, legyen Barátság kupa remélve, hogy
+                    a résztvevők között egyre több barátság alakul ki, mint
+                    Kereszturi Sándor és Lós Robi között.
+                </p>
+            </div>
+        </main>
+        <footer style="background-color: blue">
+            <div>
+                <h1 style="margin: 0 auto">Elérhetőségek</h1>
+                <a
+                    href="https://www.facebook.com/profile.php?id=100009184058833"
+                    >Barátságkupa
+                    <img class="facebook" src="facebook.PNG" alt=""
+                /></a>
+            </div>
+        </footer>
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+            crossorigin="anonymous"
+        ></script>
+    </body>
+</html>
