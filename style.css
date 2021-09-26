@@ -1,35 +1,41 @@
 h1 {
-  text-align: center;
+    text-align: center;
 }
 
 p {
-  font-weight: bold;
-  margin-left: 20px;
-  text-justify: unset;
+    font-weight: bold;
+    margin-left: 20px;
+    text-justify: unset;
 }
 
 img {
-  max-width: 80%;
-  margin-left: 200px;
-  margin-top: 20px;
+    max-width: 80%;
+    margin-left: 200px;
+    margin-top: 20px;
 }
 
 h2 {
-  margin-left: 20px;
+    margin-left: 20px;
 }
 
 form {
-  margin-left: 10px;
+    margin-left: 10px;
 }
 
 header {
-  max-width: 100%;
+    max-width: 100%;
 }
 
 .facebook {
-  margin: 10px;
+    margin: 10px;
 }
 
 a {
-  margin-left: 10px;
+    margin-left: 10px;
+}
+.map {
+    margin: 10px;
+}
+.telephone {
+    margin: 10px;
 }
