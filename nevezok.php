@@ -27,6 +27,9 @@
               <li class="nav-item">
                 <a class="nav-link" href="díjak.html">Díjak</a>
               </li>
+              <li class="nav-item">
+                                <a class="nav-link" href="nevezok.php">Nevezők</a>
+                            </li>
             </ul>
           </div>
         </div>
