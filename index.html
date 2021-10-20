@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="hu">
     <head>
@@ -57,15 +56,31 @@
                 </div>
             </nav>
         </header>
-        <main>
+        <main class="container-fluid text wrapper col-lg-12 col-md-3 col-6">
             <div>
                 <h2>Jelentkezés</h2>
             </div>
             <form action="nev.php" method="POST">
                 <label for="nev">Név:</label>
                 <input type="text" name="nev" id="nev" />
-                <input type="submit" value="Jelentkezes" />
+                <input type="submit" name="form_submit" value="Jelentkezes" />
             </form>
+        <div>
+                <h2>Fogás napló</h2>
+            </div>
+            <div>
+            <form action="fogas.php" method="post">
+                <label for="tomeg">Hal tömege:</label>
+                <input type="text" name="tomeg" id="tomeg" />
+                <label for="helyszam">hely szám:</label>
+                <input type="text" name="helyszam" id="helyszam" />
+                <label for="darabszama">darab száma:</label>
+                <input type="text" name="darabszama" id="darabszama" />
+                <label for="kategoria">kategória:</label>
+                <input type="text" name="kategoria" id="kategoria">
+                <input type="submit" name="form_submit" value="elküld" />
+            </form>
+        </div>
             <div>
                 <img src="2021 csoport.jpg" alt="" />
                 <h1>A Verseny története</h1>
@@ -85,7 +100,7 @@
                 </p>
             </div>
         </main>
-        <footer style="background-color: blue">
+        <footer class="container-fluid text wrapper" style="background-color: blue">
             <div>
                 <h1 style="margin: 0 auto">Elérhetőségek</h1>
                 <a
@@ -94,9 +109,9 @@
                     <img class="facebook" src="facebook.PNG" alt=""
                 /></a>
                 <li>
-                    06 <img class="telephone" src="telephone.png" alt="">
+                    06704660297 <img class="telephone" src="telephone.png" alt="">
                 </li>
-                     <a href="https://www.google.hu/maps/place/T%C5%91zeges+Horg%C3%A1szt%C3%B3,+T%C3%A1pi%C3%B3szentm%C3%A1rton/@47.3576645,19.7466159,17z/data=!3m1!4b1!4m5!3m4!1s0x4741a080c9f8fbc3:0x153e0e72f1775586!8m2!3d47.3576645!4d19.7488046?hl=hu">Hely</a>                           
+                     <a href="https://www.google.hu/maps/pl0ace/T%C5%91zeges+Horg%C3%A1szt%C3%B3,+T%C3%A1pi%C3%B3szentm%C3%A1rton/@47.3576645,19.7466159,17z/data=!3m1!4b1!4m5!3m4!1s0x4741a080c9f8fbc3:0x153e0e72f1775586!8m2!3d47.3576645!4d19.7488046?hl=hu">Tápiószentmárton, 31109, 2711</a>                           
                      <img class="map" src="map.png" alt="">
                 </div>
         </footer>
