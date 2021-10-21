@@ -47,7 +47,6 @@ mysqli_close($kapcsolat);
         while($sor=mysqli_fetch_array($rekodok,MYSQLI_ASSOC))
         {
             ?>
-            <div style="width: 300px; float: left;"><?php print($sor['ID']); ?></div>
             <div style="width: 300px; float: left;"><?php print($sor['nev']); ?></div>
 
   
