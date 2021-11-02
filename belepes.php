@@ -33,51 +33,37 @@
       </nav>
     </header>
     <?php
-    $kapcsolat=mysqli_connect("127.0.0.1","root","","baratsagkupa");
-    if(isset($_POST["submit"])){
-      $errors=array();
-      $true= true;
-      if(empty($_POST['felhasznalonev'])){
-        $true= false;
-        array_push($errors, "A felhasználónév nincs megadva!");
+    $felhasznalonev="admin";
+    $jelszo="admin";
+    session_start();
+    if(isset($_SESSION['felhasznalonev'])){
+
+      echo "<h1> Szia ".$_SESSION['felhasznalonev']."</h1>";
+
+
+    }
+    else{
+      if($_POST['felhasznalonev']==$felhasznalonev && $_POST['jelszo']==$jelszo){
+        $_SESSION['felhasznalonev']=$felhasznalonev;
+        echo "<script>location.href='admin.php'</script>";
+        echo "<script>location.href='admin.php'</script>";
       }
-      if(empty($_POST['jelszo'])){
-        $true= false;
-        array_push($errors, "A jelszó nincs megadva!");
+      else{
+        echo "<script>='felhasználónév vagy jelszó hibás'</script>";
+       // echo "<script>location.href='admin.php'</script>";
       }
-      if($true){
-        $felhasznalonev= mysqli_real_escape_string($kapcsolat, $_POST['felhasznalonev']);
-        $jelszo= mysqli_real_escape_string($kapcsolat, $_POST['jelszo']);
-        $jelszo= md5($jelszo);
-        $sql = "SELECT * FROM `belepes` WHERE felhasznalonev='$felhasznalonev' AND jelszo='$jelszo' ;";
-        mysqli_query($kapcsolat, $sql);
-        /*$query = $kapcsolat->query($sql);
-        if(mysqli_num_rows($query) == 1){
-          session_start();
-          $_SESSION['felhasznalonev'] = $felhasznalonev;*/
-          header("Location:admin.php");
-        }else{
-          array_push($errors, "A felhasználónév vagy jelszó nem jó!");
-        }
-      }
-    //}
-    mysqli_close($kapcsolat);   
+    }
+
     ?>
     <main>
        <form action="belepes.php" method="POST">
-         <label for="felhasznalonev">felhasználónév</label>
+         <label>felhasználónév</label>
            <input type="text" name="felhasznalonev">
-           <label for="jelszo">jelszó</label>
+           <label>jelszó</label>
            <input type="password" name="jelszo">
            <input value="Belépés" type="submit" name="submit">
        </form> 
-       <?php
-       if(!empty($errors)){
-         foreach($errors as $key){
-           echo $key."<br\>";
-         }
-       }
-       ?>
+       
     </main>
     </body>
 </html>
