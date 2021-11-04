@@ -33,27 +33,19 @@
       </nav>
     </header>
     <?php
-    $felhasznalonev="admin";
-    $jelszo="admin";
-    session_start();
-    if(isset($_SESSION['felhasznalonev'])){
-
-      echo "<h1> Szia ".$_SESSION['felhasznalonev']."</h1>";
-
-
+    
+    if( ! empty( $_POST ) )
+    {
+        if( empty( $_POST["felhasznalonev"] ) || empty( $_POST["jelszo"] ) )
+        {
+            echo "<p>Minden mező kitöltése kötelező!</p>";
+        }
+        elseif( $_POST["felhasznalonev"] == "admin" && $_POST["jelszo"] == "admin" )
+        {
+          echo "<script>location.href='admin.php'</script>";
+            echo "<h2>Sikeresen bejelentkeztél!</h2>";
+        }
     }
-    else{
-      if($_POST['felhasznalonev']==$felhasznalonev && $_POST['jelszo']==$jelszo){
-        $_SESSION['felhasznalonev']=$felhasznalonev;
-        echo "<script>location.href='admin.php'</script>";
-        echo "<script>location.href='admin.php'</script>";
-      }
-      else{
-        echo "<script>='felhasználónév vagy jelszó hibás'</script>";
-       // echo "<script>location.href='admin.php'</script>";
-      }
-    }
-
     ?>
     <main>
        <form action="belepes.php" method="POST">
