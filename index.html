@@ -62,42 +62,49 @@
             </div>
             <form action="nev.php" method="POST">
                 <label for="nev">Név:</label>
-                <input type="text" id="nev" name="nev"/>
+                <input type="text" id="nev" name="nev">
                 <input type="submit" name="submit" value="Jelentkezes" />
             </form>
         <div>
                 <h2>Fogás napló</h2>
             </div>
-            <div>
             <form action="fogas.php" method="POST">
                 <label for="tomege">Hal tömege:</label>
-                <input type="text" id="tomege" name="tomege" />
+                <input type="text" id="tomege" name="tomege" >
                 <label for="helyszama">hely száma:</label>
-                <input type="text" id="helyszama" name="helyszama" />
+                <input type="text" id="helyszama" name="helyszama" >
                 <label for="darabszama">darab száma:</label>
-                <input type="text" id="darabszama" name="darabszama" />
+                <input type="text" id="darabszama" name="darabszama" >
                 <label for="kategoriaja">kategóriája:</label>
                 <input type="text" id="kategoriaja" name="kategoriaja">
-                <input type="submit" name="elkuld" value="elkuld" />
+                <input type="submit" name="elkuld" value="Elkuld" />
             </form>
         </div>
-            <div>
-                <img src="2021 csoport.jpg" alt="" />
-                <h1>A Verseny története</h1>
-                <p>
-                    2012-ben Kereszturi Sándor az egyesület elnökeként
-                    tevékenykedett egy horgásztavon, ott tartották siketek
-                    évadnyitó versenyüket, azóta több horgásszal tartja a
-                    kapcsolatot közülük. Lós Robival többszöri „beszélgetés”, de
-                    főleg piszkálódás közben jött az ötlet csináljunk
-                    siket-halló horgászversenyt, amit évente lehetne tartani így
-                    is közelebb hozni egymáshoz az embereket. Aztán továbbment a
-                    tervezés, hogy bármilyen fogyatékkal élő ember részt
-                    vehessen ezen a napon. A verseny neve is innen adódik,
-                    sok-sok beszélgetés után, legyen Barátság kupa remélve, hogy
-                    a résztvevők között egyre több barátság alakul ki, mint
-                    Kereszturi Sándor és Lós Robi között.
-                </p>
+            <div class="card mb-3" style="margin: 10px; max-width: 100%;">
+                <div class="row g-0">
+                    <div class="col-md-4">
+                        <img class="kep" src="2021 csoport.jpg" alt="" style="margin: 0px; padding: 10px;"/>
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body">
+                            <h1>A Verseny története</h1>
+                            <p>
+                                2012-ben Kereszturi Sándor az egyesület elnökeként
+                                tevékenykedett egy horgásztavon, ott tartották siketek
+                                évadnyitó versenyüket, azóta több horgásszal tartja a
+                                kapcsolatot közülük. Lós Robival többszöri „beszélgetés”, de
+                                főleg piszkálódás közben jött az ötlet csináljunk
+                                siket-halló horgászversenyt, amit évente lehetne tartani így
+                                is közelebb hozni egymáshoz az embereket. Aztán továbbment a
+                                tervezés, hogy bármilyen fogyatékkal élő ember részt
+                                vehessen ezen a napon. A verseny neve is innen adódik,
+                                sok-sok beszélgetés után, legyen Barátság kupa remélve, hogy
+                                a résztvevők között egyre több barátság alakul ki, mint
+                                Kereszturi Sándor és Lós Robi között.
+                            </p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </main>
         <footer class="container-fluid text wrapper" style="background-color: blue">

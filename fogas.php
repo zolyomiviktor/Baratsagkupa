@@ -9,6 +9,5 @@ if (!$kapcsolat) {
 }
 $parancs="INSERT INTO fogasnaplo (tomege,helyszama,darabszama,kategoriaja ) VALUES ('$tomege','$helyszama','$darabszama','$kategoriaja');"; 
 mysqli_query($kapcsolat, $parancs);
-
 mysqli_close($kapcsolat); 
 ?>
