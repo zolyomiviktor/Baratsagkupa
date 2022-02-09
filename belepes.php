@@ -47,7 +47,7 @@
         }
     }
     ?>
-    <main>
+    <main class="container-fluid text wrapper col-lg-12 col-md-5 col-6">
        <form action="belepes.php" method="POST">
          <label>felhasználónév</label>
            <input type="text" name="felhasznalonev">
