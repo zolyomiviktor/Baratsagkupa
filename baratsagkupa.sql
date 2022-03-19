@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Gép: 127.0.0.1
--- Létrehozás ideje: 2022. Feb 09. 13:56
+-- Létrehozás ideje: 2022. Már 19. 01:24
 -- Kiszolgáló verziója: 10.4.22-MariaDB
 -- PHP verzió: 8.1.2
 
@@ -20,6 +20,8 @@ SET time_zone = "+00:00";
 --
 -- Adatbázis: `baratsagkupa`
 --
+CREATE DATABASE IF NOT EXISTS `baratsagkupa` DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
+USE `baratsagkupa`;
 
 -- --------------------------------------------------------
 
@@ -28,7 +30,8 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `fogasnaplo` (
-  `tomege` varchar(50) NOT NULL,
+  `id` int(11) NOT NULL,
+  `tomege` varchar(10) NOT NULL,
   `helyszama` int(10) NOT NULL,
   `darabszama` int(100) NOT NULL,
   `kategoriaja` varchar(255) NOT NULL
@@ -38,9 +41,9 @@ CREATE TABLE `fogasnaplo` (
 -- A tábla adatainak kiíratása `fogasnaplo`
 --
 
-INSERT INTO `fogasnaplo` (`tomege`, `helyszama`, `darabszama`, `kategoriaja`) VALUES
-('7 kg', 6, 9, 'fogyatékkal élő'),
-('8 kg', 6, 9, 'ép');
+INSERT INTO `fogasnaplo` (`id`, `tomege`, `helyszama`, `darabszama`, `kategoriaja`) VALUES
+(3, '1 kg', 7, 1, 'Ép'),
+(4, '1 kg', 7, 2, 'Ép');
 
 -- --------------------------------------------------------
 
@@ -49,16 +52,9 @@ INSERT INTO `fogasnaplo` (`tomege`, `helyszama`, `darabszama`, `kategoriaja`) VA
 --
 
 CREATE TABLE `nevezok` (
-  `ID` int(255) NOT NULL,
-  `nev` varchar(100) NOT NULL
+  `ID` int(11) NOT NULL,
+  `nev` varchar(59) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
---
--- A tábla adatainak kiíratása `nevezok`
---
-
-INSERT INTO `nevezok` (`ID`, `nev`) VALUES
-(1, 'Ferenc');
 
 --
 -- Indexek a kiírt táblákhoz
@@ -68,7 +64,7 @@ INSERT INTO `nevezok` (`ID`, `nev`) VALUES
 -- A tábla indexei `fogasnaplo`
 --
 ALTER TABLE `fogasnaplo`
-  ADD PRIMARY KEY (`tomege`);
+  ADD PRIMARY KEY (`id`);
 
 --
 -- A tábla indexei `nevezok`
@@ -81,10 +77,16 @@ ALTER TABLE `nevezok`
 --
 
 --
+-- AUTO_INCREMENT a táblához `fogasnaplo`
+--
+ALTER TABLE `fogasnaplo`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+
+--
 -- AUTO_INCREMENT a táblához `nevezok`
 --
 ALTER TABLE `nevezok`
-  MODIFY `ID` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
