@@ -30,6 +30,9 @@
               <li class="nav-item">
                                 <a class="nav-link" href="nevezok.php">Nevezők</a>
                             </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="eredmeny.php">Eredmények </a>
+                            </li>
             </ul>
           </div>
         </div>

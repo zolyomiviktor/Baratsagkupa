@@ -10,5 +10,7 @@ mysqli_query($kapcsolat, $parancs);
 
 mysqli_close($kapcsolat); 
 
+header("Location:eredmeny.php");
+
 
 ?>

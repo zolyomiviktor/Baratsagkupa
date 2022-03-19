@@ -13,6 +13,10 @@ img {
     margin-left: 200px;
     margin-top: 20px;
 }
+.card-img-top {
+    height: 50px;
+    max-width: 50%;
+}
 
 h2 {
     margin-left: 20px;
