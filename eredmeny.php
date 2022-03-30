@@ -83,7 +83,7 @@ mysqli_close($kapcsolat);
   </thead>
   <tbody>
     <tr>
-      <th scope="row"><?php print($sor['id']); ?></th>
+      <td><?php print($sor['helyszama']); ?></td>
       <td><?php print($sor['tomege']); ?></td>
       <td><?php print($sor['darabszama']); ?></td>
       <td><?php print($sor['kategoriaja']); ?></td>
